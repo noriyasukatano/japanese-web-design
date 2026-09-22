@@ -72,6 +72,7 @@ j-cat.co.jp、veryman.jp の2サイトは通常のCSS `writing-mode` ではな�
 4. 業種のトーンが力強さ・誠実さ・親しみやすさを狙う場合（採用、教育機関の訴求、EC）は、ゴシック体×タイトな行間・weight 600〜700 の「パターンB」を検討する。
 5. 実装は基本的に `writing-mode: vertical-rl;` とする。英数字を横向きのまま縦組に混植したい場合は `text-orientation: mixed;` も合わせて検討する。全面縦組ではなく、見出し・キャッチコピーなど範囲を絞った部分使用を基本形とする。
 6. 具体的な数値（font-size・letter-spacing・line-height・font-weight）を決める際は `data/vertical_writing_examples.csv` の該当パターンの実測値を出発点にする。
+7. **写真の上に直接コピーを乗せる場合は、固定位置に機械的に配置しない。** `scripts/hero_text_zone.py` で画像を解析し、情報密度が低い（busynessが低い）エリアを見つけてから配置する。縦組は特に細長い帯状の配置になりやすく、被写体（車・人物・建物の輪郭等）の上に文字が乗って読みにくくなる事故が起きやすいので注意する。詳しくは `SKILL.md` のステップ5を参照。
 
 ## 3. 「AIっぽさ」を避けるための判断原則
 

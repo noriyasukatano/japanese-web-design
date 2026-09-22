@@ -52,6 +52,12 @@ cp -r japanese-web-design-skill/.claude/skills/japanese-web-design /path/to/your
 
 moderate/bold双方のデータが揃っているのは現時点で以下6業種のみです: 不動産・建築・空間・施設、ウェディング、暮らし商品・サービス、アート、美容、IT・システム。それ以外の19業種はmoderate（choooodoii由来）のデータのみとなります。
 
+## スクリプト
+
+| ファイル | 内容 |
+|---|---|
+| `scripts/hero_text_zone.py` | ヒーロー画像の中で文字（縦組・横組コピー）を乗せるのに適したエリア（情報密度が低く、コントラストを確保しやすい場所）を検出するPythonスクリプト。`pip install pillow numpy` が必要。使い方は `SKILL.md` ステップ5を参照 |
+
 ## データの出典と利用について
 
 `data/`以下のCSVは、以下2つの日本語Webデザインギャラリーサイトを分析対象として作成しました。
