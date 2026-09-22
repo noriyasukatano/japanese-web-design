@@ -1,6 +1,6 @@
 ---
 name: japanese-web-design
-description: Use when designing, building, or reviewing a Japanese-language website, landing page, or UI — encodes Japanese typography rules (kinsoku, mixed-script spacing, mincho/gothic choice) plus real measured design data (color, font, tone, layout type) by 25 industry categories and 9 site types, sourced from curated Japanese design galleries, with both a "moderate" and a "bold" reference point per industry to avoid generic AI-looking output.
+description: Use when designing, building, or reviewing a Japanese-language website, landing page, or UI — encodes Japanese typography rules (kinsoku, mixed-script spacing, mincho/gothic choice, vertical writing/縦組) plus real measured design data (color, font, tone, layout type) by 25 industry categories and 9 site types, sourced from curated Japanese design galleries, with both a "moderate" and a "bold" reference point per industry to avoid generic AI-looking output.
 ---
 
 # 日本語Webデザイン Skill
@@ -11,7 +11,7 @@ description: Use when designing, building, or reviewing a Japanese-language webs
 
 ### ステップ1: 原則を読む
 
-`references/principles.md` を読む。日本語の文字組み（禁則処理・約物のアキ・和欧混植・字間行間・明朝ゴシックの使い分け・全角半角・縦書きの要否）と、「AIっぽさ」を避けるための判断原則、moderate/boldダイアルの考え方が書かれている。ファイルは軽量なので、日本語デザインタスクでは毎回読んでよい。
+`references/principles.md` を読む。日本語の文字組み（禁則処理・約物のアキ・和欧混植・字間行間・明朝ゴシックの使い分け・全角半角）、縦組（縦書き）という選択肢、「AIっぽさ」を避けるための判断原則、moderate/boldダイアルの考え方が書かれている。ファイルは軽量なので、日本語デザインタスクでは毎回読んでよい。
 
 ### ステップ2: ブリーフから業種とタイプを特定する
 
@@ -35,16 +35,21 @@ description: Use when designing, building, or reviewing a Japanese-language webs
 | `data/boldness_moderate_vs_bold.csv` | 6業種限定。choooodoii（moderate）と81-web（bold）の実測値比較（黒率・カラフル率・動きタグ保有率・キャンペーン型比率など）。 |
 | `data/css_reference_examples.csv` | 6業種×3サイトの実測CSS値（背景色hex・文字色hex・font-family・ボタン角丸・動画/Canvas/アニメライブラリの有無）。 |
 | `data/css_reference_examples_pilot20.csv` | 別ルートで集めた20サイトの実測CSS値と、投稿者コメント（短い一言）。参考の補強データ。 |
+| `data/vertical_writing_examples.csv` | 縦組（`writing-mode: vertical-rl`）を効果的に使っている14サイトの実測値（font-family・font-size・letter-spacing・line-height・font-weight・使用範囲）。短い日本語コピーを縦組にするかどうかを判断する際の参照データ。 |
 
 `boldness_moderate_vs_bold.csv` と `css_reference_examples.csv` は現時点で以下6業種のみ対応: 不動産・建築・空間・施設、ウェディング、暮らし商品・サービス、アート、美容、IT・システム。それ以外の業種は `industry_keywords_moderate.csv` と `industry_tone_moderate.csv` のみで判断する。
 
 ### ステップ4: moderate / bold の位置を決める
 
-`references/principles.md` の「3. moderate / bold ダイアル」に従い、ユーザーの指定またはブリーフの文脈から、どちらに寄せるかを判断する。指定がなければ業種の性質から妥当な位置を選ぶ。
+`references/principles.md` の「4. moderate / bold ダイアル」に従い、ユーザーの指定またはブリーフの文脈から、どちらに寄せるかを判断する。指定がなければ業種の性質から妥当な位置を選ぶ。
 
-### ステップ5: 数値を制約として反映し、根拠を明示する
+### ステップ5: 短い日本語コピーがあれば縦組を検討する
 
-実際のデザイン案（配色・フォント・レイアウト・モーション）を生成するときは、ステップ3-4で得た数値・実測例を具体的な制約として使う。「上品な配色」のような抽象語で止めず、「業種○○はchoooodoii統計で上品%が49.6%と高く、実測例では白・ベージュ系＋ゴシック体が中心（`css_reference_examples.csv`のFANCL/sizero等参照）」のように、根拠となった数値・出典行を出力の中で簡潔に示す。これにより、ユーザーが提案の妥当性を検証できる。
+ヒーローのキャッチコピーや1〜2行程度の見出しなど、短い日本語コピーが含まれる場合は、横組にする前に縦組（`writing-mode: vertical-rl`）の可能性を必ず検討する。判断基準と実測値は `references/principles.md` の「2. 縦組（縦書き）という選択肢」と `data/vertical_writing_examples.csv` を参照。長文の本文・フォーム等、可読性重視の箇所は横組のままでよい。
+
+### ステップ6: 数値を制約として反映し、根拠を明示する
+
+実際のデザイン案（配色・フォント・レイアウト・モーション・文字組の向き）を生成するときは、ステップ3-5で得た数値・実測例を具体的な制約として使う。「上品な配色」のような抽象語で止めず、「業種○○はchoooodoii統計で上品%が49.6%と高く、実測例では白・ベージュ系＋ゴシック体が中心（`css_reference_examples.csv`のFANCL/sizero等参照）」のように、根拠となった数値・出典行を出力の中で簡潔に示す。これにより、ユーザーが提案の妥当性を検証できる。
 
 ## データの出典・注意事項
 
