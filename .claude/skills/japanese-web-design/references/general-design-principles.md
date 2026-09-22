@@ -33,6 +33,78 @@
 - ユーザーの操作（開く・展開する・確定する）に応じたモーションは、何が変化したかを示すので歓迎される。
 - `prefers-reduced-motion` を必ず尊重する。
 
+### スクロール連動フェードイン（要素が「フワッと」出てくる演出）の実装
+
+日本語のLP・ブランドサイトでは、セクションや画像がスクロールに合わせて「フワッと」浮かび上がるように現れる演出がよく使われる。基本パターンは「初期状態を`opacity: 0`＋`transform: translateY(オフセット)`にしておき、要素が画面に入ったタイミングで`opacity: 1`＋`translateY(0)`のクラスを付与し、CSSのtransitionでなめらかに変化させる」というもの。JavaScriptの役目は「画面に入ったかどうかの判定とクラスの付け外し」だけで、実際のアニメーションはCSS側の`transition`が担う。
+
+**CSS（基本形）**
+
+```css
+.js-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.js-reveal.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 複数要素を少しずつ時間差で出す（stagger）場合 */
+.js-reveal-group > * {
+  transition-delay: calc(var(--reveal-index, 0) * 0.08s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal {
+    transition: none;
+    transform: none;
+    opacity: 1; /* motionを抑制したい環境では最初から表示してよい */
+  }
+}
+```
+
+**JS（IntersectionObserverで発火、一度出たら戻さない）**
+
+```javascript
+const revealEls = document.querySelectorAll(".js-reveal");
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-show");
+        io.unobserve(entry.target); // スクロールで往復させて何度も明滅させない
+      }
+    });
+  },
+  { root: null, rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
+);
+revealEls.forEach((el, i) => {
+  el.style.setProperty("--reveal-index", i % 6); // staggerする場合
+  io.observe(el);
+});
+```
+
+**数値の目安（FANCLの実装から実測・2026年9月時点）**
+
+実際に「フワッと」出てくる演出で定評のある実装例として、FANCLのLP（https://www.fancl.co.jp/skinpatch/index.html ）のCSSを直接取得して調べたところ、以下のような値が使われていた。
+
+- モーダル出現時のフェード＋スライドアップ：初期状態 `opacity: 0; transform: translateY(80px)`（PC）／`translateY(21.33vw)`（SP） → `transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.1s linear` → 表示状態 `opacity: 1; transform: translateY(0)`
+- 画像単体のフェードイン（`.fsp_statement_image`）：スライドなし、`opacity: 0 → 1` のみのシンプルな不透明度フェード
+- スクロール誘導アイコン（`.fsp_scroll-attention`）：`opacity: 0; transition: opacity 0.3s ease` → `is-show`で`opacity: 1`
+- クラスの付け外しは`.is-show`という命名で統一されており、JS側は`IntersectionObserver`（`threshold: 0`、`rootMargin: "0px"`）で交差を検知してクラスを切り替える実装だった（WebGLキャンバスのオートプレイ判定に使用されているものを確認。スクロール連動の演出全般も同じ仕組みに乗っていると見られる）。
+
+上記から、実務での目安としては以下を推奨する。
+
+- **オフセット量**：`translateY(20px〜80px)` 程度。大きすぎると「ズレて見える」、小さすぎると「フワッと感」が出ない。
+- **duration**：transform（位置）は`0.5s〜0.8s`程度とやや長め、opacity（不透明度）はそれより短いか同程度。長さを揃えすぎず、transformの方をわずかに長くすると重みが出る。
+- **easing**：transformには`cubic-bezier(0.165, 0.84, 0.44, 1)`のような「最初は速く、終わりにかけてゆっくり収束する」イージング（ease-out系）を使うと「フワッと」感が出やすい。直線的な`linear`は避ける。
+- **一度きりの発火**：スクロールで要素が出たり消えたりするたびに再アニメーションさせると煩雑な印象になりやすいので、`IntersectionObserver`で最初に交差した時点で`unobserve`し、以後は表示状態を維持するのが無難（ページの主旨上「何度も注目させたい」意図がある場合は除く）。
+- **staggerは控えめに**：複数カード・複数行を連続して出す場合、1要素あたり`0.05s〜0.1s`程度の遅延差で十分。差を大きくしすぎるとページの体感速度が遅く感じられる。
+- **`prefers-reduced-motion`**：モーション低減を希望する環境では、`transition`を無効化し最初から`opacity: 1`で表示する（動きを見せない代わりに情報は即座に見える状態にする）。
+
 ## 5. UIライティングの原則
 
 - 言葉は理解を助けるために存在し、装飾のためではない。
@@ -60,3 +132,7 @@
 - [Web制作の基本4大原則・余白・配色比率など](https://www.webcoach.jp/media/web-design/4010/)
 - [20のデザインルール（近接・整列・コントラスト等）](https://www.canva.com/ja_jp/learn/design-rules/)
 - [Webデザインの7原則](https://blog.adobe.com/jp/publish/2021/08/23/cc-web-5-principles-design)
+
+「スクロール連動フェードイン」節の実測値は、FANCLの以下ページの公開CSS（`style.css`）を実際に取得し、`opacity`/`transform`/`transition`の宣言値を読み取って作成した（2026年9月時点。サイト運営者の実装は変更される可能性がある）。
+
+- [FANCL SKIN PATCH](https://www.fancl.co.jp/skinpatch/index.html)
