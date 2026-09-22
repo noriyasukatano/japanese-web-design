@@ -1,0 +1,21 @@
+gallery_id,url,業種,タイプ,軸1_左,軸1_右,軸1_値0to10,軸2_左,軸2_右,軸2_値0to10,軸3_左,軸3_右,軸3_値0to10,投稿者コメント,背景色,文字色,フォント分類,フォント(生値),ボタン角丸px,角丸あり,動画あり,Canvas/WebGLあり,YouTube/Vimeo埋込,JSアニメライブラリ,動き系要素あり
+23482,https://fmhr.co.jp/,企画・制作・開発,コーポレートサイト,ポップ,信頼・堅実,10,シンプル,賑やか,3,かわいい,かっこいい,9,キュートで可愛いデザイン！,#f9f9f9,#333333,ゴシック・sans系,"""Noto Sans JP""",0,False,True,False,False,,True
+23488,https://sumai-okane.com/,暮らし・建築・不動産,コーポレートサイト,賑やか,シンプル,8,親しみやすい,堅実,4,スタイリッシュ,ポップ,7,オレンジが目をひくスピード感のあるサイト！,transparent,#251e1c,丸ゴシック系,"""Zen Maru Gothic""",10,True,False,False,False,,False
+6018,https://bake-jp.com/,飲料・食品,コーポレートサイト,上品・リッチ,ポップ,1,賑やか,スタイリッシュ,8,かっこいい,かわいい,3,堅実だけどすっきり,#f0f0e9,#000000,明朝・serif系,yu-mincho-pr6n,0,False,False,False,False,,False
+5978,https://www.serta-japan.jp/,暮らし・建築・不動産,ブランド・サービスサイト,真面目,親しみがある,5,柔らかい,硬い,7,落ち着きがある,活気がある,2,文字だけの斬新なデザイン,transparent,#072c52,ゴシック・sans系,FOT-筑紫ゴシック,,False,False,True,False,,True
+5301,https://www.rydeenbeer.jp/,飲料・食品,ブランド・サービスサイト,シンプル,華やか,1,たおやか,力強い,8,柔らかい,硬い,8,エネルギッシュな新緑,#ffffff,#000000,ゴシック・sans系,FP-こぶりなゴシック,0,False,False,False,False,,False
+23423,https://www.yki.jp/,金融・証券・保険・法律,コーポレートサイト,堅実・信頼感,個性的,1,かわいい,かっこいい,8,汎用性,専門性,10,丁寧な和の空気感,transparent,#154243,ゴシック・sans系,"""Noto Sans JP""",0,False,True,False,False,,True
+23409,https://www.ha-ko.co.jp/,企画・制作・開発,コーポレートサイト,暗い,明るい,9,堅実・安心感,個性的,3,強い,やさしい,8,全部独り占めしたい秀逸なコンテンツ,transparent,#000000,ゴシック・sans系,"""Zen Kaku Gothic Antique""",30,True,False,False,False,,False
+9465,https://nakamura-seihakusho.co.jp/,機械・電機・工業・流通,コーポレートサイト,シンプル,華やか,4,柔らかい,硬い,1,落ち着きがある,活気がある,1,ポップさと渋さの両立,transparent,#141414,明朝・serif系,"""Noto Serif JP""",0,False,False,False,False,lottie,True
+8843,https://jf-itsuki.com/,農業・水産業・林業,コーポレートサイト,シンプル,華やか,2,柔らかい,硬い,8,落ち着きがある,活気がある,2,波をイメージしたアニメーションが印象的,transparent,#000000,ゴシック・sans系,"""Noto Sans JP""",,False,False,False,False,,False
+2832,https://wani-nouen.com/,農業・水産業・林業,コーポレートサイト,明るい,暗い,1,真面目,遊び心がある,8,柔らかい,硬い,2,水と生きる,#ffffff,#333333,明朝・serif系,游明朝,0,False,False,False,False,,False
+23111,https://www.dream-v.co.jp/,Webサービス・アプリ,コーポレートサイト,先進的,レトロ,0,賑やか,落ち着き,8,かっこいい,かわいい,1,手ざわり感の演出,transparent,#000000,ゴシック・sans系,"""Noto Sans JP""",0,False,True,True,False,,True
+22921,https://www.sanikleen.co.jp/recruit/honbu/,暮らし・建築・不動産,採用サイト,信頼,ポップ,0,華やか,落ち着き,9,親しみやすい,堅実,6,イラストと組み合わせたスライダーが特徴的,transparent,#222222,ゴシック・sans系,"""Noto Sans JP""",60,True,False,False,False,,False
+7771,https://www.maruko.com/corp/recruit/,コスメティック・美容,採用サイト,明るい,暗い,0,女性的,男性的,0,素朴,華やか,10,いきるを考える,#ffffff,#444444,ゴシック・sans系,游ゴシック,,False,False,True,False,,True
+22571,https://www.navicus.jp/,企画・制作・開発,採用サイト,暗い,明るい,9,柔らかい,硬い,3,クラシカル,先進的,8,みずみずしい透明感,transparent,#2b283b,ゴシック・sans系,"""Zen Kaku Gothic Antique""",50,True,False,False,False,gsap,True
+20725,https://www.taikisha.co.jp/recruit/,暮らし・建築・不動産,採用サイト,明るい,暗い,0,柔らかい,硬い,0,落ち着きがある,活気がある,0,本のようなデザイン,#ffffff,#000000,ゴシック・sans系,游ゴシック体,,False,False,True,True,,True
+20646,https://hakusuku.jp/recruit/,企画・制作・開発,採用サイト,シンプル,派手,0,真面目,遊び心がある,2,明るい,暗い,0,シンプル格好いいの最上級,#eeeeee,#231f20,その他/欧文,"""Shippori Antique""",0,False,True,False,True,,True
+20917,https://www.southernlink.co.jp/,金融・証券・保険・法律,採用サイト,スマート,パワフル,2,カラフル,モノトーン,3,カジュアル,フォーマル,6,洗練された空間,#ffffff,#000000,ゴシック・sans系,YakuHanJP/Noto Sans JP,0,False,False,False,False,,False
+21228,https://jobs.nealle.com/,暮らし・建築・不動産,採用サイト,暗い,明るい,8,かわいい,格好いい,8,シンプル,ポップ,2,ポップさと信頼感のバランスがGood！,transparent,#222222,ゴシック・sans系,YakuHanJPs/Noto Sans JP,99990,True,False,False,False,,False
+20812,https://www.sankei-digital.co.jp/recruit/,TV・映画・芸能,採用サイト,シンプル,派手,2,真面目,遊び心がある,1,堅実,放漫,0,カジュアルでおしゃれ,#f5f5f5,#211e1d,ゴシック・sans系,source-han-sans-japanese,0,False,False,False,False,,False
+20950,https://www.umetoku.co.jp/recruitingsite/,機械・電機・工業・流通,採用サイト,動きがある,落ち着き,3,個性的,スタンダード,3,ユニーク,王道,1,淡いイラストが印象的なシンプルなデザイン,#ffffff,#000000,ゴシック・sans系,"""Zen Kaku Gothic New""",0,False,True,False,False,,True

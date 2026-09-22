@@ -1,0 +1,19 @@
+業種,URL,背景色_raw,背景色_hex,文字色_raw,文字色_hex,フォント_生値,フォント分類,ボタン角丸px,角丸あり,動画あり,Canvas/WebGLあり,YouTube/Vimeo埋込,JSアニメライブラリ
+美容,https://www.fancl.co.jp/skinpatch/index.html,"rgba(0, 0, 0, 0)",透明,"rgb(0, 0, 0)",#000000,ヒラギノ角ゴ ProN W3 etc (Hiragino Kaku Gothic ProN),ゴシック・Sans系,50%,True,True,True,True,False
+美容,https://sizero.jp/,"rgb(51, 51, 51)",#333333,"rgb(255, 255, 255)",#FFFFFF,"General Sans, Zen Kaku Gothic New",ゴシック・Sans系,0px,False,False,True,False,False
+美容,https://ichi-hairsalon.com/,"rgb(245, 247, 243)",#F5F7F3,"rgb(0, 0, 0)",#000000,"Zen Kaku Gothic New, 游ゴシック Medium",ゴシック・Sans系,,不明,False,True,False,False
+不動産・建築・空間・施設,https://birusisu.co.jp/,"rgba(0, 0, 0, 0)",透明,"rgb(0, 0, 0)",#000000,"LINE Seed JP, Noto Sans JP",ゴシック・Sans系,0px,False,False,False,False,False
+不動産・建築・空間・施設,https://stagelab.inkdom.jp/,"rgb(255, 255, 255)",#FFFFFF,"rgb(34, 34, 34)",#222222,"zen-kaku-gothic-new, 游ゴシック",ゴシック・Sans系,0px,False,False,True,False,False
+不動産・建築・空間・施設,https://izanami-official.com/ja/,"rgb(10, 8, 1)",#0A0801,"rgb(217, 215, 212)",#D9D7D4,"Helvetica Neue, Hiragino Kaku Gothic ProN",ゴシック・Sans系,0px,False,False,True,False,False
+暮らし商品・サービス,https://4kake.com/,"rgb(17, 17, 17)",#111111,"rgba(18, 18, 18, 0.75)",#121212,"Helvetica, Arial",その他・欧文独自書体,0px,False,True,False,False,False
+暮らし商品・サービス,https://tosou.nishizaki.co.jp/,"rgb(255, 255, 255)",#FFFFFF,"rgb(0, 0, 0)",#000000,"neue-haas-grotesk-text, fot-cezanne-pron",その他・欧文独自書体,,不明,True,False,False,False
+暮らし商品・サービス,https://meoto.jp/,"rgb(240, 238, 237)",#F0EEED,"rgb(8, 8, 8)",#080808,Noto Sans JP,ゴシック・Sans系,,不明,False,False,False,False
+アート,https://www.hirotos.com/,"rgb(255, 255, 255)",#FFFFFF,"rgb(16, 16, 15)",#10100F,helvetica-neue-lt-pro,その他・欧文独自書体,,不明,False,True,False,False
+アート,https://typography.or.jp/,"rgb(250, 250, 250)",#FAFAFA,"rgb(0, 0, 0)",#000000,"Inter, MFW-GothicBBBPr6N-Medium",ゴシック・Sans系,9999px,True,False,False,False,False
+アート,https://www.yamatane-museum.jp/,"rgba(0, 0, 0, 0)",透明,"rgb(0, 0, 0)",#000000,Zen Kaku Gothic Antique,ゴシック・Sans系,0px,False,False,False,False,False
+ウェディング,https://wedding.trunk-hotel.com/catstreet,"rgb(18, 18, 18)",#121212,"rgb(18, 18, 18)",#121212,Zen Kaku Gothic New,ゴシック・Sans系,0px,False,True,False,False,False
+ウェディング,https://sumire-totalbeauty.jp/,"rgba(0, 0, 0, 0)",透明,"rgb(62, 77, 67)",#3E4D43,Shippori Mincho (serif/mincho),明朝・Serif系,0px,False,False,False,False,False
+ウェディング,https://shiroyamakumano-jinja.jp/,"rgba(0, 0, 0, 0)",透明,"rgb(0, 0, 0)",#000000,fot-tsukuaoldmin-pr6n (traditional mincho),明朝・Serif系,0px,False,False,False,False,False
+IT・システム,https://squiz.co.jp/,"rgb(245, 245, 245)",#F5F5F5,"rgb(0, 0, 0)",#000000,"CezanneProN-M, Helvetica Neue, Noto Sans JP",ゴシック・Sans系,9999px,True,False,False,False,False
+IT・システム,https://delta-x.co.jp/,"rgba(0, 0, 0, 0)",透明,"rgb(0, 0, 0)",#000000,Hiragino Kaku Gothic ProN,ゴシック・Sans系,8px,True,False,False,False,False
+IT・システム,https://aishift.com/,"rgb(255, 255, 255)",#FFFFFF,"rgb(21, 27, 60)",#151B3C,"NewCezannePro-DB, Hiragino Kaku Gothic ProN",ゴシック・Sans系,0px,False,False,False,False,False
